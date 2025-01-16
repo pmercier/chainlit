@@ -3696,8 +3696,8 @@ files = [
 [package.dependencies]
 numpy = [
     {version = ">=1.22.4", markers = "python_version < \"3.11\""},
-    {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
     {version = ">=1.23.2", markers = "python_version == \"3.11\""},
+    {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
 ]
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
@@ -5934,4 +5934,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<4.0.0"
-content-hash = "e8533bb7b78c8b472302999b864d0043d23e1987e8b50e2b315573618d14edd0"
+content-hash = "eadf22125fea6d54e09ac94d4e5e88f2cea46621a3d1f00c2200492b8c1dc948"

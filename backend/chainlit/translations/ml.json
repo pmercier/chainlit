@@ -137,6 +137,9 @@
           },
           "waterMark": {
             "text": "നിർമ്മിച്ചത്"
+          },
+          "header": {
+            "message": ""
           }
         },
         "Messages": {

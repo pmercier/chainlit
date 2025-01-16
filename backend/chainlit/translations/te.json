@@ -137,6 +137,9 @@
           },
           "waterMark": {
             "text": "దీనితో నిర్మించబడింది"
+          },
+          "header": {
+            "message": ""
           }
         },
         "Messages": {

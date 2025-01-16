@@ -19,7 +19,7 @@ export default function Starters({ className }: Props) {
         (profile) => profile.name === chatProfile
       );
       if (selectedChatProfile?.starters) {
-        return selectedChatProfile.starters.slice(0, 4);
+        return selectedChatProfile.starters.slice(0, 12);
       }
     }
     return config?.starters;
