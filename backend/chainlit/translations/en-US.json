@@ -136,6 +136,9 @@
           },
           "waterMark": {
             "text": "Built with"
+          },
+          "header": {
+            "message": "You can interact directly with the Digi assistant through the chat box below."
           }
         },
         "Messages": {

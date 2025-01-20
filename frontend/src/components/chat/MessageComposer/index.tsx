@@ -19,6 +19,7 @@ import { IAttachment, attachmentsState } from 'state/chat';
 
 import AutoResizeTextarea from '../../AutoResizeTextarea';
 import { Attachments } from './Attachments';
+import Header from './Header';
 import SubmitButton from './SubmitButton';
 import UploadButton from './UploadButton';
 import VoiceButton from './VoiceButton';
@@ -130,49 +131,54 @@ export default function MessageComposer({
   ]);
 
   return (
-    <div className="bg-accent rounded-3xl p-3 px-4 w-full min-h-24 flex flex-col">
-      {attachments.length > 0 ? (
-        <div className="mb-1">
-          <Attachments />
-        </div>
-      ) : null}
-      <AutoResizeTextarea
-        id="chat-input"
-        autoFocus
-        value={value}
-        onPaste={onPaste}
-        onEnter={submit}
-        onChange={(e) => setValue(e.target.value)}
-        className="bg-transparent placeholder:text-base placeholder:font-medium text-base"
-        maxHeight={250}
-        placeholder={t('components.organisms.chat.inputBox.input.placeholder')}
-      />
-      <div className="flex items-center justify-between">
-        <div className="flex items-center -ml-1.5">
-          <UploadButton
-            disabled={disabled}
-            fileSpec={fileSpec}
-            onFileUploadError={onFileUploadError}
-            onFileUpload={onFileUpload}
-          />
-          {chatSettingsInputs.length > 0 && (
-            <Button
-              id="chat-settings-open-modal"
-              disabled={disabled}
-              onClick={() => setChatSettingsOpen(true)}
-              className="hover:bg-muted"
-              variant="ghost"
-              size="icon"
-            >
-              <Settings className="!size-6" />
-            </Button>
+    <>
+      <Header />
+      <div className="bg-accent rounded-3xl p-3 px-4 w-full min-h-24 flex flex-col">
+        {attachments.length > 0 ? (
+          <div className="mb-1">
+            <Attachments />
+          </div>
+        ) : null}
+        <AutoResizeTextarea
+          id="chat-input"
+          autoFocus
+          value={value}
+          onPaste={onPaste}
+          onEnter={submit}
+          onChange={(e) => setValue(e.target.value)}
+          className="bg-transparent placeholder:text-base placeholder:font-medium text-base"
+          maxHeight={250}
+          placeholder={t(
+            'components.organisms.chat.inputBox.input.placeholder'
           )}
-          <VoiceButton disabled={disabled} />
-        </div>
-        <div className="flex items-center gap-1">
-          <SubmitButton onSubmit={submit} disabled={disabled || !value} />
+        />
+        <div className="flex items-center justify-between">
+          <div className="flex items-center -ml-1.5">
+            <UploadButton
+              disabled={disabled}
+              fileSpec={fileSpec}
+              onFileUploadError={onFileUploadError}
+              onFileUpload={onFileUpload}
+            />
+            {chatSettingsInputs.length > 0 && (
+              <Button
+                id="chat-settings-open-modal"
+                disabled={disabled}
+                onClick={() => setChatSettingsOpen(true)}
+                className="hover:bg-muted"
+                variant="ghost"
+                size="icon"
+              >
+                <Settings className="!size-6" />
+              </Button>
+            )}
+            <VoiceButton disabled={disabled} />
+          </div>
+          <div className="flex items-center gap-1">
+            <SubmitButton onSubmit={submit} disabled={disabled || !value} />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

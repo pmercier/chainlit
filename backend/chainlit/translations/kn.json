@@ -137,6 +137,9 @@
           },
           "waterMark": {
             "text": "ಇದರೊಂದಿಗೆ ನಿರ್ಮಿಸಲಾಗಿದೆ"
+          },
+          "header": {
+            "message": ""
           }
         },
         "Messages": {

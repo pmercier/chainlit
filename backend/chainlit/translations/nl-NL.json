@@ -135,6 +135,9 @@
                     },
                     "waterMark": {
                         "text": "Gebouwd met"
+                    },
+                    "header": {
+                      "message": ""
                     }
                 },
                 "Messages": {

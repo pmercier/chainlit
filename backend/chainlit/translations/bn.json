@@ -137,6 +137,9 @@
           },
           "waterMark": {
             "text": "সঙ্গে নির্মিত"
+          },
+          "header": {
+            "message": ""
           }
         },
         "Messages": {

@@ -137,6 +137,9 @@
           },
           "waterMark": {
             "text": "נבנה עם"
+          },
+          "header": {
+            "message": ""
           }
         },
         "Messages": {

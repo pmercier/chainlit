@@ -136,6 +136,9 @@
           },
           "waterMark": {
             "text": "使用"
+          },
+          "header": {
+            "message": ""
           }
         },
         "Messages": {

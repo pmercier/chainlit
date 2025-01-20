@@ -1,5 +1,5 @@
 import { cn, hasMessage } from '@/lib/utils';
-import { useContext, useEffect, useMemo, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 
 import {
   ChainlitContext,
@@ -14,6 +14,7 @@ import Markdown from '@/components/Markdown';
 
 import MessageComposer from './MessageComposer';
 import Starters from './Starters';
+import WelcomeMessage from './WelcomeMessage';
 
 interface Props {
   fileSpec: FileSpec;
@@ -77,6 +78,7 @@ export default function WelcomeScreen(props: Props) {
       )}
     >
       {logo}
+      <WelcomeMessage />
       <MessageComposer {...props} />
       <Starters />
     </div>
